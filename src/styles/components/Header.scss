@@ -1,0 +1,18 @@
+.header {
+    background: url('https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg') center center;
+    background-size: cover;
+    padding: $xl-size * 2;
+    color: $black;
+    text-align: center;
+    min-height: 40vh;
+}
+
+.header__title {
+    color: white;
+    font-size: $xl-size;
+}
+
+.header__subtitle {
+    color: white;
+    font-size: $m-size;
+}

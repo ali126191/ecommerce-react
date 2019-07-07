@@ -2,7 +2,7 @@
 .navbar {
     font-size: 18px;
     padding-bottom: $m-size;
-    background: yellow;
+    background: $primary;
 }
 
 .navbar__ul {
@@ -19,7 +19,7 @@
 .navbar__links, 
 .navbar__logo {
     text-decoration: none;
-    color: $black;
+    color: white;
 }
 
 .navbar__logo {
@@ -27,6 +27,11 @@
     font-size: 22px;
     margin-top: 10px;
     margin-left: 20px;
+}
+
+.is-active {
+    font-weight: bold;
+    color: black;
 }
 
 @media screen and (min-width: 768px) {

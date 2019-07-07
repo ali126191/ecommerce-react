@@ -16,7 +16,7 @@ const Checkout = (props) => {
                    handleMinusOneQuantity={props.handleMinusOneQuantity}
                    cart={props.cart}
                   /> 
-                <span>Total</span>
+              <span>Total</span>
               </li>
             )
           })}

@@ -1,18 +1,23 @@
 import React from 'react'
-const NavBar = () => {
+import { Link, NavLink } from 'react-router-dom';
+
+const NavBar = (props) => {
     return (
         <nav className="navbar">
-            <a href="#a" className="navbar__logo">Logo</a>
+            <Link to="/" className="navbar__logo">Logo</Link>
             <ul className="navbar__ul">
                 <li>
-                    <a href="#a" className="navbar__links">Links</a>    
+                    <NavLink to="/" className="navbar__links" activeClassName="is-active" exact={true}>Home</NavLink>    
                 </li>
                 <li>
-                    <a href="#b" className="navbar__links">Links</a>    
+                    <NavLink to="/my-account" className="navbar__links" activeClassName="is-active">Account</NavLink>    
                 </li>
                 <li>
-                    <a href="#c" className="navbar__links">Links</a>    
+                    <NavLink to="/checkout" className="navbar__links" activeClassName="is-active"> {props.cart.length} Checkout</NavLink>    
                 </li>
+                <li>
+                <NavLink to="/login" className="navbar__links" activeClassName="is-active">Login</NavLink>    
+            </li>
             </ul>
         </nav>
     )

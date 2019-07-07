@@ -4,10 +4,10 @@ import Item from './Item';
 
 const Items = (props) => {
     return (
-      <div>
-        <ol>Phones: {props.phones.map((phone, index) => {
+      <div className="items">
+          {props.phones.map((phone, index) => {
           return <Item handleAddToCart={props.handleAddToCart} phone={phone} key={index}/>
-        })}</ol>
+        })}
       </div>
     )
 }

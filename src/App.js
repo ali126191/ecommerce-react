@@ -26,6 +26,21 @@ export default class Ecommerce extends Component {
           name: 'Iphone xs',
           price: 1400,
           quantity: 0
+        },
+        {
+          name: 'Iphone 8',
+          price: 6400,
+          quantity: 0
+        },
+        {
+          name: 'Iphone 4',
+          price: 300,
+          quantity: 0
+        },
+        {
+          name: 'Moto G 5',
+          price: 180,
+          quantity: 0
         }
       ],
       cart: []
@@ -117,15 +132,16 @@ export default class Ecommerce extends Component {
     const subtitle = 'Buy your favorite cell phone online';
     return (
       <div>
-        <NavBar/>
+        <NavBar 
+        cart={this.state.cart}
+        />
         <Header 
           title={title} 
           subtitle={subtitle}
         />
         <div className="container">
-          <Cart 
-          cart={this.state.cart}
-          />
+          <h2 className="h2">Browse Products</h2>
+
           <Items 
             phones={this.state.phones}
             handleAddToCart={this.handleAddToCart}

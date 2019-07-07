@@ -1,0 +1,6 @@
+.items {
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size;
+    flex-wrap: wrap;
+}
