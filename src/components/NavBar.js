@@ -13,7 +13,10 @@ const NavBar = (props) => {
                     <NavLink to="/my-account" className="navbar__links" activeClassName="is-active">Account</NavLink>    
                 </li>
                 <li>
-                    <NavLink to="/checkout" className="navbar__links" activeClassName="is-active"> {props.cart.length} Checkout</NavLink>    
+                    <NavLink to={{
+                        pathname:'/checkout',
+                        state: props
+                    }} className="navbar__links" activeClassName="is-active"> {props.cart.length} Checkout</NavLink>    
                 </li>
                 <li>
                 <NavLink to="/login" className="navbar__links" activeClassName="is-active">Login</NavLink>    

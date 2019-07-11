@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Items from './components/Items';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import { Link } from 'react-router-dom';
 
 export default class Ecommerce extends Component {
   constructor(props) {
@@ -132,8 +133,12 @@ export default class Ecommerce extends Component {
     const subtitle = 'Buy your favorite cell phone online';
     return (
       <div>
+        <Link to={{
+          pathname: "/checkout",
+          state: this.state
+        }}>New PAGE</Link>
         <NavBar 
-        cart={this.state.cart}
+          cart={this.state.cart}
         />
         <Header 
           title={title} 

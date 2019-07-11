@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from '../App';
 import NotFoundPage from '../components/NotFoundPage';
-import CheckOutPage from '../pages/Checkout'
+import CheckOutPage from '../pages/CheckoutPage'
 import MyAccount from '../pages/MyAccount';
 import LoginPage from '../pages/LoginPage';
 
