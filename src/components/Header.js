@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Header = (props) => {
-    return (
-      <div className="header">
-          <h1 className="header__title">{props.title}</h1>
-          <h2 className="header__subtitle">{props.subtitle}</h2>
-      </div>
-    );
-  }
+const Header = () => (
+    <header>
+        <h1>Phonify</h1>
+        <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
+        <NavLink to="/cart" activeClassName="is-active" exact={true}>Cart</NavLink>
+        <NavLink to="/help" activeClassName="is-active" exact={true}>Help</NavLink>
+    </header>
+)
 
-export default Header
+export default Header;
