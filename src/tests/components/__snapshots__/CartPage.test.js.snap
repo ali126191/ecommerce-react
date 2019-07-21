@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CartPage correctly 1`] = `
+<div>
+  <Header />
+  <h2>
+    Cart
+  </h2>
+  <Connect(CartItems) />
+</div>
+`;
