@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import PhoneListItem from './PhoneListItem';
 import SelectExpenses from '../selectors/cart';
 
-const PhoneList = (props) => (
+export const PhoneList = (props) => (
     <div>
         <h1>Phone List</h1>
         {props.phones.map((phone) => (
             <PhoneListItem key={phone.id} {...phone}/>
         ))}
-        {console.log(props.cart, 'phone list')}
     </div>
 )
 

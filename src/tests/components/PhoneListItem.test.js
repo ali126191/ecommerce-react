@@ -1,8 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import toJSON from 'enzyme-to-json';
 import { PhoneListItem } from '../../components/PhoneListItem';
+import Phones from '../fixtures/phones';
 
-expect('should render phonelist item correctly', () => {
-    const wrapper = shallow(<PhoneListItem />);
-    expect(wrapper).toMatchSnapShot();
-})
+test('should render PhoneListItem correctly', () => {
+    const wrapper = shallow(<PhoneListItem {...Phones[0]} />);
+    expect(toJSON(wrapper)).toMatchSnapshot()
+});

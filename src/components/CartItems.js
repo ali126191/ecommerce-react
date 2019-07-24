@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateItemQuantity, removeCartItem } from '../actions/cart';
 
-const CartItems = (props) => (
+export const CartItems = (props) => (
     <div>
         {props.cart.map((phone, index) => (
             <div key={phone.id}>
@@ -11,7 +11,6 @@ const CartItems = (props) => (
                 <button 
                     onClick={() => {
                         props.dispatch(updateItemQuantity(phone.id, { quantity: 1 }))
-                        console.log('clicked to add')
                     }}
                 >
                     Add quantity
@@ -20,7 +19,6 @@ const CartItems = (props) => (
                     onClick={() => {
                         if (phone.quantity > 0) {
                             props.dispatch(updateItemQuantity(phone.id, { quantity: -1 }))
-                            
                         }
                     }}
                 >

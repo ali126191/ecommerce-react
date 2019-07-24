@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PhoneListItem correctly 1`] = `
+<div>
+  Google Pixel
+  :
+  1000
+  ,
+  0
+  -
+  <button
+    onClick={[Function]}
+  >
+    Add To Cart
+  </button>
+</div>
+`;

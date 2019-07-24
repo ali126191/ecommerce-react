@@ -1,22 +1,21 @@
-import uuid from 'uuid';
 
 export default [
     {
       name: 'Google Pixel',
       price: 1000,
       quantity: 0,
-      id: uuid()
+      id: '1'
     },
     {
       name: 'Black Berry',
       price: 600,
       quantity: 0,
-      id: uuid()
+      id: '2'
     },
     {
       name: 'Iphone xs',
       price: 1400,
       quantity: 0,
-      id: uuid()
+      id: '3u'
     }
 ]
