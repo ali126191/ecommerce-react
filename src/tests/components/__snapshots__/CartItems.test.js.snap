@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CartItems correctly 1`] = `
+<div>
+  <div
+    key="1"
+  >
+    Google Pixel
+    -
+    0
+    <button
+      onClick={[Function]}
+    >
+      Add quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Decrease quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    key="2"
+  >
+    Black Berry
+    -
+    0
+    <button
+      onClick={[Function]}
+    >
+      Add quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Decrease quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <div
+    key="3u"
+  >
+    Iphone xs
+    -
+    0
+    <button
+      onClick={[Function]}
+    >
+      Add quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Decrease quantity
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</div>
+`;

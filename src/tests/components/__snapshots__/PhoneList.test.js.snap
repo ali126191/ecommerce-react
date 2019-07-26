@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render PhoneList correctly 1`] = `
+exports[`should render PhoneList with Phones 1`] = `
 <div>
   <h1>
     Phone List

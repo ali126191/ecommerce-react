@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PhoneListFilter correctly 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <select
+    onChange={[Function]}
+    value="random"
+  >
+    <option
+      value="price"
+    >
+      Price
+    </option>
+    <option
+      value="random"
+    >
+      Random
+    </option>
+  </select>
+</div>
+`;
+
+exports[`should render PhoneListFilter with alt data correctly 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    type="text"
+    value="gal"
+  />
+  <select
+    onChange={[Function]}
+    value="price"
+  >
+    <option
+      value="price"
+    >
+      Price
+    </option>
+    <option
+      value="random"
+    >
+      Random
+    </option>
+  </select>
+</div>
+`;

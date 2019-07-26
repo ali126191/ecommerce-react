@@ -1,30 +1,38 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, sortByPrice, sortByRandom} from '../actions/filters';
+import { setTextFilter, sortByPrice, sortByRandom } from '../actions/filters';
 
-const PhoneListFilters = (props) => (
-    <div>
-        <input 
-            value={props.filters.text}
-            type="text" 
-            onChange={(e) => {
-                props.dispatch(setTextFilter(e.target.value));
-             }}  
-        />
-        <select 
-            onChange={(e) => {
-                if (e.target.value === 'price') {
-                    props.dispatch(sortByPrice())
-                } else if (e.target.value === 'random') {
-                    props.dispatch(sortByRandom())
-                }
-            }}
-        >
-             <option value="price">Price</option>
-             <option value="random">Random</option>
-        </select>
-    </div>
-)
+export class PhoneListFilters extends React.Component {
+    onTextChange = (e) => {
+        this.props.setTextFilter(e.target.value);
+     }
+     onSortChange = (e) => {
+        if (e.target.value === 'price') {
+            this.props.sortByPrice();
+        } else if (e.target.value === 'random') {
+            this.props.sortByRandom();
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <input 
+                    type="text" 
+                    value={this.props.filters.text}
+                    onChange={this.onTextChange}  
+                />
+                <select 
+                    value={this.props.filters.sortBy}
+                    onChange={this.onSortChange}
+                >
+                     <option value="price">Price</option>
+                     <option value="random">Random</option>
+                </select>
+            </div>
+        )
+    }
+}
 
 const mapStateToProps = (state) => {
     return {
@@ -32,4 +40,10 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(PhoneListFilters);
+const mapDispatchToProps = (dispatch) => ({
+    setTextFilter: (text) => dispatch(setTextFilter(text)),
+    sortByPrice: () => dispatch(sortByPrice()),
+    sortByRandom: () => dispatch(sortByRandom())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhoneListFilters);

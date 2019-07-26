@@ -8,3 +8,4 @@ test('should render PhoneListItem correctly', () => {
     const wrapper = shallow(<PhoneListItem {...Phones[0]} />);
     expect(toJSON(wrapper)).toMatchSnapshot()
 });
+
